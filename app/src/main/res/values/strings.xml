@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BreukenTrainer2</string>
+    <string name="app_name">Division Trainer</string>
     <string name="StartScreen_text">Choose a difficulty to start a game, or have a look at the tip of the day ;)</string>
 
 </resources>

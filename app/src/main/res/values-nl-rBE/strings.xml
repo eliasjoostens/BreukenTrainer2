@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Breuken Trainer</string>
+    <string name="StartScreen_text">Kies een moeilijkheidsgraad om te starten, of piep naar de tip van de dag ;)</string>
+</resources>
