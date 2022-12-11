@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
 
         val btnStartBasic = findViewById<Button>(R.id.buttonBasic)
         val btnStartAdvanced = findViewById<Button>(R.id.buttonAdvanced)
+        val btnTip = findViewById<Button>(R.id.buttonTip)
+
 
         btnStartBasic.setOnClickListener {
             val intent = Intent(this, ExerciseActivity::class.java)
@@ -25,6 +27,14 @@ class MainActivity : AppCompatActivity() {
         btnStartAdvanced.setOnClickListener {
             val intent = Intent(this, ExerciseActivity::class.java)
             intent.putExtra("Level","Advanced")
+            // start your next activity
+            startActivity(intent)
+
+            finish()
+        }
+
+        btnTip.setOnClickListener {
+            val intent = Intent(this, TipOfTheDayActivity::class.java)
             // start your next activity
             startActivity(intent)
 
