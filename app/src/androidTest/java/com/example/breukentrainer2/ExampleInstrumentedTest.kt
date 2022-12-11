@@ -21,4 +21,14 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.breukentrainer2", appContext.packageName)
     }
+
+    @Test
+    fun useFrac() {
+        // Context of the app under test.
+        var frac1 = Frac(1, 2)
+        var frac2 = Frac(2, 3)
+        frac1 = frac1.plus(frac2)
+        var frac3 = Frac(7, 6)
+        assertEquals(frac1, frac3)
+    }
 }
