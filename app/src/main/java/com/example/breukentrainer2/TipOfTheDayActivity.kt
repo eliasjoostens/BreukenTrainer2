@@ -32,7 +32,7 @@ class TipOfTheDayActivity : AppCompatActivity() {
         // Only for Background process (can take time depending on the Internet speed)
         executor.execute {
 
-            val imageURL = "https://www.slimleren.nl/files/300_300/Breuk(3).png"
+            val imageURL = "https://www.examenoverzicht.nl/pub/media/wysiwyg/Wiskunde/Rekenregel_bij_het_optellen_en_aftrekken_van_breuken_a.PNG"
             //val imageURL = "https://img.icons8.com/windows/512/corgi.png"
             //val imageURL = "https://ehb-my.sharepoint.com/:i:/g/personal/elias_joostens_student_ehb_be/ETNpMGrtT-5BrgpyZEFJr9QBdHWmenPmNqLpsDDz4-drlg?e=de0kBc"
             //val imageURL = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
