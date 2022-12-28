@@ -1,5 +1,6 @@
 package com.example.breukentrainer2
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.media.Image
@@ -7,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.widget.Button
 import android.widget.ImageView
 import java.util.concurrent.Executors
 
@@ -25,6 +27,14 @@ class TipOfTheDayActivity : AppCompatActivity() {
             }
         }
 
+        val left_arrow = findViewById<ImageView>(R.id.left_arrow)
+
+        left_arrow.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            // start your next activity
+            startActivity(intent)
+            finish()
+        }
 
         // Declaring and initializing the ImageView
         val imageView = findViewById<ImageView>(R.id.imageTipView)
