@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         val btnStartBasic = findViewById<Button>(R.id.buttonBasic)
         val btnStartAdvanced = findViewById<Button>(R.id.buttonAdvanced)
         val btnTip = findViewById<Button>(R.id.buttonTip)
+        var tipNr = 0;
 
 
         btnStartBasic.setOnClickListener {
@@ -35,6 +36,13 @@ class MainActivity : AppCompatActivity() {
 
         btnTip.setOnClickListener {
             val intent = Intent(this, TipOfTheDayActivity::class.java)
+
+            tipNr = (0..2).random()
+            intent.putExtra("TipNr", tipNr)
+            // start your next activity
+            startActivity(intent)
+
+
             // start your next activity
             startActivity(intent)
 

@@ -5,9 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.lifecycleScope
+import com.example.breukentrainer2.db.Score
+import com.example.breukentrainer2.db.ScoreRoomDatabase
+import kotlinx.coroutines.launch
 import kotlin.system.exitProcess
 
 class ScoreActivity : AppCompatActivity() {
+    private val scoreDatabase by lazy { ScoreRoomDatabase.getDatabase(this).scoreDao() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_score)
@@ -30,6 +36,14 @@ class ScoreActivity : AppCompatActivity() {
         val mButtonQuit = findViewById<Button>(R.id.buttonQuit);
         mButtonQuit.setOnClickListener {
             exitProcess(0)
+        }
+
+        val mButtonDB = findViewById<Button>(R.id.ButtonDB);
+        mButtonDB.setOnClickListener {
+            val newScore = Score(score = "mijn score")
+            lifecycleScope.launch {
+                scoreDatabase.addScore(newScore)
+            }
         }
     }
 }
